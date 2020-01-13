@@ -1,0 +1,3 @@
+class CurrentEarthquakes::Cli
+    
+end
