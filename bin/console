@@ -9,6 +9,7 @@ require "current_earthquakes"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-CurrentEarthquakes::ApiService.get_significant_day
+CurrentEarthquakes::Cli.new.call
 require "irb"
 IRB.start(__FILE__)
+
