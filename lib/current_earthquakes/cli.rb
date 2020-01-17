@@ -16,7 +16,7 @@ class CurrentEarthquakes::Cli
         earthquake_hash = []
         Earthquakes.all.each{ |earthquake| earthquake_hash <<{earthquake.place => ->   do display(earthquake) end }}
         prompt = TTY::Prompt.new(active_color: :cyan)
-        prompt.select("Choose location?".colorize(:blue), earthquake_hash,per_page: 20)
+        prompt.select("Choose location for details?".colorize(:blue), earthquake_hash,per_page: 20)
         menu
     end
 
