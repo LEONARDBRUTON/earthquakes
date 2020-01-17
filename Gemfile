@@ -1,10 +1,9 @@
+
+
 source "https://rubygems.org"
 gem 'rest-client'
 gem 'pry'
-gem 'lolize'
 gem 'tty-prompt'
+gem 'colorize', '~> 0.8.1'
 
-
-
-# Specify your gem's dependencies in current_earthquakes.gemspec
 gemspec

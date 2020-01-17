@@ -8,7 +8,6 @@ class Earthquakes
         @place = args['place']
         @mag = args['mag']
         @time = Earthquakes.source_time(args['time'])
-        
         @@all << self
     end
 
@@ -19,7 +18,4 @@ class Earthquakes
     def self.source_time(date)
         Time.at(date/1000)
     end
-    
-    
-
 end
