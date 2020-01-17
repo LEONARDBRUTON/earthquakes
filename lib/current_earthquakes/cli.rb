@@ -43,7 +43,7 @@ class CurrentEarthquakes::Cli
     end
 
     def goodbye
-        puts "May the force be with you!...goodbye!".colorize(:blue)
+        puts "May the force be with you!...Goodbye!".colorize(:blue)
         exit
     end
 end
