@@ -1,8 +1,16 @@
 # CurrentEarthquakes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/current_earthquakes`. To experiment with that code, run `bin/console` for an interactive prompt.
+Instructions and how it Operates.(type:.bin/current_earthquakes, then hit:enter)
 
-TODO: Delete this and the text above, and describe your gem
+1. A command line interface for earthquakes of the latest day over 2.5 magnitude
+
+2. Welcome greeting, then it asks "See Today's Earthquakes?" or "Exit" (Use ↑/↓ arrow keys, press Enter to select)
+3. Choose with prompt, hit enter/ lists earthquakes by location,or exit logs you back out.
+4. Choose location for details/ you may need to open terminal screen for choices (Use ↑/↓ arrow keys, press Enter to select)
+5. Choose with prompt, hit enter/ lists place, magnitude, and time of the earthquake.
+6. Then prompts to see earthquake menu or exit (Use ↑/↓ arrow keys, press Enter to select)
+7. When exit it gives goodbye message and logs out.
+
 
 ## Installation
 
@@ -22,7 +30,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+(type:.bin/current_earthquakes, then hit:enter)Instructions and how it Operates.(type:.bin/current_earthquakes, then hit:enter)
+
+1. A command line interface for earthquakes of the latest day over 2.5 magnitude
+
+2. Welcome greeting, then it asks "See Today's Earthquakes?" or "Exit" (Use ↑/↓ arrow keys, press Enter to select)
+3. Choose with prompt, hit enter/ lists earthquakes by location,or exit logs you back out.
+4. Choose location for details/ you may need to open terminal screen for choices (Use ↑/↓ arrow keys, press Enter to select)
+5. Choose with prompt, hit enter/ lists place, magnitude, and time of the earthquake.
+6. Then prompts to see earthquake menu or exit (Use ↑/↓ arrow keys, press Enter to select)
+7. When exit it gives goodbye message and logs out.
+
+
+
 
 ## Development
 
@@ -32,7 +52,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/current_earthquakes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[LEONARDBRUTON]/current_earthquakes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +60,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CurrentEarthquakes project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/current_earthquakes/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CurrentEarthquakes project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[LEONARDBRUTON]/current_earthquakes/blob/master/CODE_OF_CONDUCT.md).

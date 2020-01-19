@@ -12,6 +12,15 @@ class CurrentEarthquakes::Cli
        puts "Welcome to Earthquake News!".colorize(:blue)    
     end
 
+    def menu
+        prompt = TTY::Prompt.new(active_color: :cyan)
+            @menu = [
+                {"See Today's Earthquakes?" => ->  do 
+                event end},
+                  {"Exit" => -> do goodbye end}]
+            prompt.select("", @menu)
+    end
+
     def event
         earthquake_hash = []
         Earthquakes.all.each{ |earthquake| earthquake_hash <<{earthquake.place => ->   do display(earthquake) end }}
@@ -28,18 +37,6 @@ class CurrentEarthquakes::Cli
 
        puts earthquake.time
 
-    end
-    
-    def menu
-        prompt = TTY::Prompt.new(active_color: :cyan)
-             @menu = [
-                 {"See Today's Earthquakes?" => ->  do 
-                 event 
-                 end},
-                 {"Exit" => -> do goodbye 
-                end}
-             ]
-             prompt.select("", @menu)
     end
 
     def goodbye

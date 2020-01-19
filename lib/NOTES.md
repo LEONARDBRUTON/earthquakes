@@ -14,7 +14,7 @@ How to build a CLI Gem
 11. Fine tune and finish Notes/Instructions
 
 
-Instructions and how it Operates.
+Instructions and how it Operates.(type:.bin/current_earthquakes, then hit:enter)
 
 1. A command line interface for earthquakes of latest day
 

@@ -5,5 +5,4 @@ gem 'rest-client'
 gem 'pry'
 gem 'tty-prompt'
 gem 'colorize', '~> 0.8.1'
-
 gemspec
