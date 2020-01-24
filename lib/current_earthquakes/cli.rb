@@ -13,22 +13,38 @@ class CurrentEarthquakes::Cli
     end
 
     def menu
-        prompt = TTY::Prompt.new(active_color: :cyan)
-            @menu = [
-                {"See Earthquakes for the last 24hr?" => ->  do 
-                event end},
-                  {"Exit" => -> do goodbye end}]
-            prompt.select("", @menu)
+        puts  "See Earthquakes for the last 24hr?".colorize(:light_blue)
+        puts "Enter Y for Yes or N for No.".colorize(:red)
+        input = gets.strip.upcase
+        if input == "Y"
+            Earthquakes.all.each.with_index(1) do |earthquake, index|
+                puts "#{index}. #{earthquake.place}".colorize(:red)
+            end
+              list_choice  
+        elsif input == "N"
+                 goodbye
+        else
+            puts "invalid input, try again!".colorize(:red)
+            menu
+        end
+        
     end
 
-    def event
-        earthquake_hash = []
-        Earthquakes.all.each{ |earthquake| earthquake_hash <<{earthquake.place => ->   do display(earthquake) end }}
-        prompt = TTY::Prompt.new(active_color: :cyan)
-        prompt.select("******Latest Earthquakes by location******".colorize(:blue), earthquake_hash,per_page: 20)
-        menu
+    def list_choice
+        puts "Choose number of place to see details, or N to exit?".colorize(:blue)
+        input = gets.strip
+        if input.upcase == "N"
+            goodbye
+    
+        elsif  input.to_i <= Earthquakes.all.count && input.to_i >= 1
+            earthquake = Earthquakes.all[input.to_i-1]
+            display(earthquake).colorize(:red)   
+       else
+            puts "invalid input, try again!".colorize(:red)
+            menu
+        end
     end
-
+    
     def display(earthquake)
     
        puts earthquake.place
@@ -36,7 +52,8 @@ class CurrentEarthquakes::Cli
        puts earthquake.mag
 
        puts earthquake.time
-
+       
+        menu
     end
 
     def goodbye
