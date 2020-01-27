@@ -4,7 +4,7 @@ require "bundler/setup"
 require "current_earthquakes"
 
 # You can add fixtures and/or initialization code here to make experimenting
-
+colorizer = Lolize::Colorizer.new
 CurrentEarthquakes::Cli.new.call
 require "irb"
 IRB.start(__FILE__)

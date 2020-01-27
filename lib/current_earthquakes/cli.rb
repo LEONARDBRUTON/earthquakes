@@ -4,17 +4,20 @@ class CurrentEarthquakes::Cli
  
     def call
      ApiService.get_earthquakes
-     greeting
+     greeting   
      menu
     end
 
     def greeting
-       puts "******Welcome to Earthquake News!******".colorize(:blue)    
+        puts "***************************************".colorize(:light_blue)
+        puts "*     Welcome to Earthquake News!     *".colorize(:blue)
+        puts "*                                     *".colorize(:light_blue)
+        puts "***************************************".colorize(:light_blue)
     end
 
     def menu
         puts  "See Earthquakes for the last 24hr?".colorize(:light_blue)
-        puts "Enter Y for Yes or N for No.".colorize(:red)
+        puts "Enter Y for Yes or N for Exit.".colorize(:red)
         input = gets.strip.upcase
         if input == "Y"
             Earthquakes.all.each.with_index(1) do |earthquake, index|
@@ -24,14 +27,16 @@ class CurrentEarthquakes::Cli
         elsif input == "N"
                  goodbye
         else
-            puts "invalid input, try again!".colorize(:red)
+            puts "**********************************".colorize(:red)
+            puts "**   INVALID INPUT, try again!  **".colorize(:red)
+            puts "**********************************".colorize(:red)
             menu
         end
         
     end
 
     def list_choice
-        puts "Choose number of place to see details, or N to exit?".colorize(:blue)
+        puts "Scroll & choose number of place,to see details, or N to exit?".colorize(:blue)
         input = gets.strip
         if input.upcase == "N"
             goodbye
@@ -40,7 +45,9 @@ class CurrentEarthquakes::Cli
             earthquake = Earthquakes.all[input.to_i-1]
             display(earthquake).colorize(:red)   
        else
-            puts "invalid input, try again!".colorize(:red)
+            puts "**********************************".colorize(:red)
+            puts "**   INVALID INPUT, try again!  **".colorize(:red)
+            puts "**********************************".colorize(:red)
             menu
         end
     end
@@ -57,7 +64,9 @@ class CurrentEarthquakes::Cli
     end
 
     def goodbye
-        puts "May the force be with you!...Goodbye!".colorize(:blue)
+        puts "*********************************************".colorize(:blue)
+        puts "**  May the force be with you!...Goodbye!  **".colorize(:light_blue)
+        puts "*********************************************".colorize(:blue)
         exit
     end
 end

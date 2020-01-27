@@ -16,11 +16,13 @@ How to build a CLI Gem
 
 Instructions and how it Operates.(type:.bin/current_earthquakes, then hit:enter)
 
-1. A command line interface for earthquakes of latest day
+Instructions and how it Operates.(type:.bin/current_earthquakes, then hit:enter)
 
-2. Welcome greeting, ask if you want to see latest earthquakes (Use ↑/↓ arrow keys, press Enter to select)
-3. Choose with prompt, hit enter/ lists earthquakes by location.
-4. Choose location for details (Use ↑/↓ arrow keys, press Enter to select)
-5. Choose with prompt, hit enter/ lists place, magnitude, and time of the earthquake.
-6. Then prompts to see earthquake menu or exit (Use ↑/↓ arrow keys, press Enter to select)
-7. When exit it gives goodbye message and logs out.
+1. A command line interface that lists earthquakes of the latest 24hrs over 2.5 magnitude.
+
+2. Welcome greeting, then it asks "See Earthquakes for the last 24hr?" or "N" to Exit. (enter "Y" or "N")
+3. It lists earthquakes by location,or "N" logs you back out.
+4. Choose location by number for details/ you may need to open terminal screen for choices. (Use ↑/↓ arrow keys, to scroll,and press "Enter")
+5. Scroll & choose number of place,to see details, or N to exit?/ lists place, magnitude, and time of the earthquake.
+6. Also it asks again "Scroll & choose number of place,to see details, or N to exit?" (Use ↑/↓ arrow keys, to scroll,and press "Enter")
+7. When you chose "N" it gives goodbye message and logs out.
