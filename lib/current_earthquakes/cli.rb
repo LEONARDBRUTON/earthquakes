@@ -15,27 +15,6 @@ class CurrentEarthquakes::Cli
         puts "***************************************".colorize(:light_blue)
     end
 
-    # def menu
-                                
-        
-    #     input = gets.strip.upcase
-    #     if input == "Y"
-    #         Earthquakes.all.each.with_index(1) do |earthquake, index|
-    #             puts "|  #{index}. #{earthquake.place }".colorize(:light_blue)  
-    #             puts "|______________________________________________|".colorize(:light_blue)
-            
-    #         end
-    #     elsif input == "N"
-    #              goodbye
-    #     else
-    #         puts "**********************************".colorize(:red)
-    #         puts "**   INVALID INPUT, try again!  **"52:d8:aa:43:c2:c8:52:8d:49:a2:3d:1f:51:1f:21:1d.colorize(:red)
-    #         puts "**********************************".colorize(:red)
-    #         menu
-    #     end
-        
-    # end
-
     def menu
          puts "******************************************".colorize(:blue)
          puts "**  See Earthquakes for the last 24hr?  **".colorize(:light_blue)
@@ -48,7 +27,7 @@ class CurrentEarthquakes::Cli
         input = gets.strip.upcase
         if input == "Y"
          Earthquakes.all.each.with_index(1) do |earthquake, index|
-             puts "#{index}. #{earthquake.place}".colorize(:red)
+            puts "#{index}. #{earthquake.place}".colorize(:red)
          end
               list_choice  
         elsif input == "N"
@@ -56,7 +35,7 @@ class CurrentEarthquakes::Cli
         else
             puts "**********************************".colorize(:red)
             puts "**   INVALID INPUT, try again!  **".colorize(:red)
-         puts "**********************************".colorize(:red)
+            puts "**********************************".colorize(:red)
          menu
         end
         
@@ -92,17 +71,6 @@ class CurrentEarthquakes::Cli
        puts "******************************".colorize(:red)
         menu
     end
-    
-    # def display(earthquake)
-    
-    #    puts earthquake.place
-
-    #    puts earthquake.mag
-
-    #    puts earthquake.time
-       
-    #     menu
-    # end
 
     def goodbye
         puts "*********************************************".colorize(:blue)
