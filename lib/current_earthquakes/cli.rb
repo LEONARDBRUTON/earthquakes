@@ -15,28 +15,58 @@ class CurrentEarthquakes::Cli
         puts "***************************************".colorize(:light_blue)
     end
 
+    # def menu
+
+    #     puts "******************************************".colorize(:blue)
+    #     puts "**  See Earthquakes for the last 24hr?  **".colorize(:light_blue)
+    #     puts "******************************************".colorize(:blue)
+    #     puts "******************************************".colorize(:blue)
+    #     puts "**  Enter Y for Yes, or N for Exit?     **".colorize(:light_blue)
+    #     puts "******************************************".colorize(:blue)
+    #     puts "                                          "
+        
+    #     input = gets.strip.upcase
+    #     if input == "Y"
+    #         Earthquakes.all.each.with_index(1) do |earthquake, index|
+    #             puts "|  #{index}. #{earthquake.place }".colorize(:light_blue)  
+    #             puts "|______________________________________________|".colorize(:light_blue)
+            
+    #         end
+    #     elsif input == "N"
+    #              goodbye
+    #     else
+    #         puts "**********************************".colorize(:red)
+    #         puts "**   INVALID INPUT, try again!  **"52:d8:aa:43:c2:c8:52:8d:49:a2:3d:1f:51:1f:21:1d.colorize(:red)
+    #         puts "**********************************".colorize(:red)
+    #         menu
+    #     end
+        
+    # end
+
     def menu
-        puts  "See Earthquakes for the last 24hr?".colorize(:light_blue)
+     puts  "See Earthquakes for the last 24hr?".colorize(:light_blue)
         puts "Enter Y for Yes or N for Exit.".colorize(:red)
         input = gets.strip.upcase
         if input == "Y"
-            Earthquakes.all.each.with_index(1) do |earthquake, index|
-                puts "#{index}. #{earthquake.place}".colorize(:red)
-            end
+         Earthquakes.all.each.with_index(1) do |earthquake, index|
+             puts "#{index}. #{earthquake.place}".colorize(:red)
+         end
               list_choice  
         elsif input == "N"
                  goodbye
         else
             puts "**********************************".colorize(:red)
             puts "**   INVALID INPUT, try again!  **".colorize(:red)
-            puts "**********************************".colorize(:red)
-            menu
+         puts "**********************************".colorize(:red)
+         menu
         end
         
-    end
+     end
 
     def list_choice
-        puts "Scroll & choose number of place,to see details, or N to exit?".colorize(:blue)
+        puts "***********************************************************************".colorize(:blue)
+        puts "** Scroll up & choose number of place to see details?, or N to exit? **".colorize(:blue)
+        puts "***********************************************************************".colorize(:blue)
         input = gets.strip
         if input.upcase == "N"
             goodbye
@@ -46,22 +76,51 @@ class CurrentEarthquakes::Cli
             display(earthquake).colorize(:red)   
        else
             puts "**********************************".colorize(:red)
-            puts "**   INVALID INPUT, try again!  **".colorize(:red)
+            puts "**   INVALID INPUT, Try Again!  **".colorize(:red)
             puts "**********************************".colorize(:red)
             menu
         end
     end
+
+    # def list_choice
+    #     puts "Scroll & choose number of place,to see details, or N to exit?".colorize(:blue)
+    #     input = gets.strip
+    #     if input.upcase == "N"
+    #         goodbye
     
+    #     elsif  input.to_i <= Earthquakes.all.count && input.to_i >= 1
+    #         earthquake = Earthquakes.all[input.to_i-1]
+    #         display(earthquake).colorize(:red)   
+    #    else
+    #         puts "**********************************".colorize(:red)
+    #         puts "**   INVALID INPUT, try again!  **".colorize(:red)
+    #         puts "**********************************".colorize(:red)
+    #         menu
+    #     end
+    # end
+
     def display(earthquake)
-    
+
+       puts "*************************".colorize(:red)
        puts earthquake.place
 
        puts earthquake.mag
 
        puts earthquake.time
-       
+        puts "*************************".colorize(:red)
         menu
     end
+    
+    # def display(earthquake)
+    
+    #    puts earthquake.place
+
+    #    puts earthquake.mag
+
+    #    puts earthquake.time
+       
+    #     menu
+    # end
 
     def goodbye
         puts "*********************************************".colorize(:blue)
