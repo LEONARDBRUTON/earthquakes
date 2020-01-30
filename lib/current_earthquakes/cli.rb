@@ -62,13 +62,13 @@ class CurrentEarthquakes::Cli
 
     def display(earthquake)
 
-       puts "******************************".colorize(:red)
+       puts "*************************************".colorize(:red)
        puts earthquake.place
 
        puts earthquake.mag
 
        puts earthquake.time
-       puts "******************************".colorize(:red)
+       puts "*************************************".colorize(:red)
         menu
     end
 
