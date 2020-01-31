@@ -54,7 +54,7 @@ class CurrentEarthquakes::Cli
     
         elsif  input.to_i <= Earthquakes.all.count && input.to_i >= 1
             earthquake = Earthquakes.all[input.to_i-1]
-            display(earthquake).colorize(:red)   
+             display(earthquake)   
        else
             puts "**********************************".colorize(:red)
             puts "**   INVALID INPUT, Try Again!  **".colorize(:red)
