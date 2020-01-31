@@ -30,11 +30,10 @@ class CurrentEarthquakes::Cli
                 puts "|  #{index}. #{earthquake.place }".colorize(:light_blue)  
                 puts "|_____________________________________________________|".colorize(:light_blue)
             
-         #Earthquakes.all.each.with_index(1) do |earthquake, index|
-          #  puts "#{index}. #{earthquake.place}".colorize(:red)
-         end
+        end
               list_choice  
         elsif input == "N"
+            goodbye
         else
             puts "**********************************".colorize(:red)
             puts "**   INVALID INPUT, try again!  **".colorize(:red)
@@ -65,13 +64,13 @@ class CurrentEarthquakes::Cli
 
     def display(earthquake)
 
-       puts "*************************************".colorize(:red)
+       puts "*********************************************".colorize(:red)
        puts earthquake.place
 
        puts earthquake.mag
 
        puts earthquake.time
-       puts "*************************************".colorize(:red)
+       puts "*********************************************".colorize(:red)
         menu
     end
 
